@@ -1,295 +1,134 @@
-/* Navigation C */
-.navigation {
-    position: relative;
-    width: 1680px;
-    height: 126px;
-    background: #FFFFFF;
+/* Base Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
 }
 
-/* Sample Logo */
+/* Navigation */
+.navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px;
+    background: #FFFFFF;
+    width: 100%;
+}
+
 .sample-logo {
-    position: absolute;
     width: 125px;
     height: 43px;
-    left: 59px;
-    top: 42px;
 }
 
-/* photo */
-.photo {
-    position: absolute;
-    left: 28.16%;
-    right: 0%;
-    top: 0%;
-    bottom: 0%;
-    font-family: 'Comfortaa';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 28.4444px;
-    line-height: 32px;
+nav ul {
+    list-style: none;
     display: flex;
-    align-items: center;
-    text-align: center;
-    letter-spacing: -0.015em;
-    color: #000000;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
 }
 
-/* Union */
-.union {
-    position: absolute;
-    left: 0%;
-    right: 81.55%;
-    top: 9.26%;
-    bottom: 20.37%;
-    background: #CCCCCC;
+nav ul li {
+    display: inline;
 }
 
-/* Rectangle 2 */
-.rectangle-2 {
-    position: absolute;
-    left: 0%;
-    right: 81.55%;
-    top: 9.26%;
-    bottom: 69.89%;
-    background: #C4C4C4;
-}
-
-/* Rectangle 2.1 */
-.rectangle-2-1 {
-    position: absolute;
-    left: 5.47%;
-    right: 70.33%;
-    top: 79.63%;
-    bottom: 4.48%;
-    background: #C4C4C4;
-    transform: matrix(0, -1, -1, 0, 0, 0);
-}
-
-/* Union */
-.union-rotated {
-    position: absolute;
-    left: 18.45%;
-    right: 63.11%;
-    top: 79.63%;
-    bottom: -50%;
-    background: #000000;
-    transform: rotate(-180deg);
-}
-
-/* Rectangle 2 */
-.rectangle-2-rotated {
-    position: absolute;
-    left: 18.45%;
-    right: 63.11%;
-    top: 79.63%;
-    bottom: -0.48%;
-    background: #C4C4C4;
-    transform: rotate(-180deg);
-}
-
-/* Rectangle 2.1 */
-.rectangle-2-1-rotated {
-    position: absolute;
-    left: 12.98%;
-    right: 62.81%;
-    top: 9.26%;
-    bottom: 74.85%;
-    background: #C4C4C4;
-    transform: matrix(0, 1, 1, 0, 0, 0);
-}
-
-/* Contact */
-.contact {
-    position: absolute;
-    width: 67px;
-    height: 23px;
-    left: 257px;
-    top: 52px;
-    font-family: 'Montserrat';
-    font-style: normal;
+nav ul li a {
+    text-decoration: none;
     font-weight: 500;
     font-size: 15px;
-    line-height: 18px;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    letter-spacing: -0.015em;
     color: #9472BF;
 }
 
-/* Pricing */
-.pricing {
-    position: absolute;
-    width: 55px;
-    height: 23px;
-    left: 365px;
-    top: 52px;
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 15px;
-    line-height: 18px;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    letter-spacing: -0.015em;
-    color: #9472BF;
-}
-
-/* Community */
-.community {
-    position: absolute;
-    width: 91px;
-    height: 23px;
-    left: 461px;
-    top: 52px;
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 15px;
-    line-height: 18px;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    letter-spacing: -0.015em;
-    color: #9472BF;
-}
-
-/* Support */
-.support {
-    position: absolute;
-    width: 63px;
-    height: 23px;
-    left: 593px;
-    top: 52px;
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 15px;
-    line-height: 18px;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    letter-spacing: -0.015em;
-    color: #9472BF;
-}
-
-/* Primary Button */
-.primary-button {
-    position: absolute;
-    width: 134px;
-    height: 53px;
-    left: 1487px;
-    top: 37px;
-    background: #9472BF;
+.primary-button, .outline-button {
+    padding: 12px 24px;
     border-radius: 6px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Montserrat';
-    font-style: normal;
     font-weight: 500;
-    font-size: 18px;
-    line-height: 22px;
-    letter-spacing: -0.015em;
-    color: #FFFFFF;
+    text-align: center;
 }
 
-/* Outline Button */
+.primary-button {
+    background: #9472BF;
+    color: #FFFFFF;
+    border: none;
+}
+
 .outline-button {
-    position: absolute;
-    width: 134px;
-    height: 53px;
-    left: 1341px;
-    top: 37px;
     background: #F0D1FF;
     border: 1px solid #9472BF;
-    border-radius: 6px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 15px;
-    line-height: 18px;
-    letter-spacing: -0.015em;
     color: #9472BF;
 }
 
-/* Hero E */
+/* Hero Section */
 .hero {
-    position: relative;
-    width: 1680px;
-    height: 629px;
-    background: #FFFFFF;
-}
-
-/* FIND JOBS */
-.find-jobs {
-    position: absolute;
-    width: 581px;
-    height: 93px;
-    left: 549px;
-    top: 183px;
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 49px;
-    line-height: 60px;
     display: flex;
     align-items: center;
-    text-align: center;
-    letter-spacing: -0.015em;
-    color: #000000;
-}
-
-/* Footer C */
-.footer {
-    position: relative;
-    width: 1680px;
-    height: 232px;
+    justify-content: flex-end;
+    height: 330px;
     background: #FFFFFF;
+    flex-direction: column;
 }
 
-/* Mobile app */
-.mobile-app {
-    position: absolute;
-    width: 173px;
-    height: 16px;
-    left: 80px;
-    top: 30px;
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 15px;
-    line-height: 24px;
-    letter-spacing: -0.015em;
+.find-jobs {
+    font-weight: 500;
+    font-size: 49px;
+    text-align: center;
     color: #000000;
 }
 
-/* © Photo, Inc. 2019. We love our users! */
-.footer-text {
-    position: absolute;
-    width: 301px;
-    height: 16px;
-    left: 687px;
-    top: 186px;
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 15px;
-    line-height: 24px;
-    text-align: center;
-    letter-spacing: -0.015em;
-    color: rgba(0, 0, 0, 0.8);
+/* Search Section */
+.searchDiv {
+    display: flex;
+    justify-content: center;
+    padding: 40px 0 310px 0;
 }
 
-/* Ellipse - Circular Image Block */
-.ellipse-group {
-    position: absolute;
-    left: 719px;
-    top: 131px;
+.search {
+    display: flex;
+    align-items: center;
+    padding: 12px 16px;
+    gap: 8px;
+    width: 80%;
+    max-width: 848px;
+    background: #FFFFFF;
+    border: 1px solid #444444;
+    border-radius: 9999px;
+}
+
+.value {
+    flex: 1;
+    font-size: 16px;
+    border: none;
+    outline: none;
+}
+
+.search-button {
+    padding: 12px 24px;
+    background: #9472BF;
+    border: 1px solid #82639A;
+    border-radius: 81px;
+    color: #F5F5F5;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Footer Section */
+.footer {
+    padding: 40px 20px;
+    background: #FFFFFF;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer p {
+    margin: 0;
+}
+
+/* .ellipse-group {
     display: flex;
     gap: 8px;
 }
@@ -299,116 +138,86 @@
     height: 29px;
     background: #E5E5E5;
     border: 1px solid rgba(0, 0, 0, 0.3);
+} */
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navigation {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .hero {
+        height: auto;
+        padding: 20px 0;
+    }
+
+    .find-jobs {
+        font-size: 36px;
+    }
+
+    .search {
+        width: 100%;
+    }
+
+    .primary-button, .outline-button {
+        width: 100%;
+        margin-top: 10px;
+    }
 }
 
-/* Community */
-.community-footer {
-    position: absolute;
-    width: 173px;
-    height: 16px;
-    left: 272px;
-    top: 30px;
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 15px;
-    line-height: 24px;
-    letter-spacing: -0.015em;
-    color: #000000;
-}
+@media (max-width: 480px) {
+    .find-jobs {
+        font-size: 28px;
+    }
 
-/* Blog */
-.blog-footer {
-    position: absolute;
-    width: 173px;
-    height: 16px;
-    left: 1233px;
-    top: 30px;
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 15px;
-    line-height: 24px;
-    text-align: right;
-    letter-spacing: -0.015em;
-    color: #000000;
-}
+    .search-button {
+        font-size: 14px;
+        padding: 10px 16px;
+    }
 
-/* Resources */
-.resources-footer {
-    position: absolute;
-    width: 173px;
-    height: 16px;
-    left: 1423px;
-    top: 30px;
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 15px;
-    line-height: 24px;
-    text-align: right;
-    letter-spacing: -0.015em;
-    color: #000000;
-}
+    .footer {
+        padding: 20px 10px;
+    }
 
-/* Rectangle */
-.rectangle {
-    position: absolute;
-    width: 1516px;
-    height: 1px;
-    left: 80px;
-    top: 77px;
-    background: rgba(0, 0, 0, 0.5);
-}
+    .ellipse-group {
+        flex-direction: column;
+    }
 
-/* Search */
-.search {
+    .ellipse {
+        width: 35px;
+        height: 25px;
+    }
+}
+.ellipse-group {
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 12px 16px;
     gap: 8px;
-    position: relative;
-    width: 848px;
-    height: 64px;
-    background: #FFFFFF;
-    border: 1px solid #444444;
-    border-radius: 9999px;
-}
-
-/* Value */
-.value {
-    width: 816px;
-    height: 16px;
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 100%;
-    color: #1E1E1E;
-    border: none;
-    outline: none;
-}
-
-/* Button */
-.search-button {
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding: 12px;
-    gap: 8px;
-    position: relative;
-    width: 111px;
-    height: 44px;
-    background: #9472BF;
-    border: 1px solid #82639A;
-    border-radius: 81px;
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 100%;
-    color: #F5F5F5;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+}
+
+.ellipse {
+    width: 44px;
+    height: 44px; /* Adjusted to make the div perfectly circular */
+    background: #E5E5E5;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 50%; /* Makes the div circular */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Ensures logo doesn't overflow the container */
+}
+
+.ellipse img {
+    max-width: 70%;
+    max-height: 100%;
+    object-fit: contain; /* Ensures the logo maintains its aspect ratio */
 }
